@@ -25,7 +25,7 @@ function Login() {
 
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.title}>Iniciar Sesión</h2>
+      <h2 className={styles.title}>Sesión</h2>
       <form onSubmit={handleSubmit} className={styles.form}>
         {error && <div className={styles.error}>{error}</div>}
         <div className={styles.inputGroup}>
