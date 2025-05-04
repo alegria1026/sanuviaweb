@@ -1,0 +1,163 @@
+.wrapper {
+    max-width: 1400px;
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding-bottom: 3rem;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    color: #208C3C;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.carouselContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carouselContent {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.productCard {
+    transition: transform 0.5s ease;
+    flex-shrink: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.productLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.imageContainer {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.productLink:hover .productImage {
+    transform: scale(1.03);
+}
+
+.productTitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Flechas */
+.arrowButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 10;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.arrowButton:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.leftArrow {
+    left: 20px;
+}
+
+.rightArrow {
+    right: 20px;
+}
+
+.iconArrow {
+    width: 20px;
+    height: 20px;
+}
+
+/* Desktop (3 columnas) */
+@media (min-width: 769px) {
+    .carouselContent {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    transform: none !important;
+    }
+    
+    .productCard {
+    flex: 1;
+    min-width: 300px;
+    max-width: calc(33.333% - 20px);
+    transform: none !important;
+    }
+}
+
+/* Móvil (carrusel) */
+@media (max-width: 768px) {
+    .carouselContent {
+    flex-wrap: nowrap;
+    }
+    
+    .productCard {
+    flex: 0 0 100%;
+    min-width: 100%;
+    }
+    
+    .title {
+    font-size: 2rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .productTitle {
+    font-size: 1.2rem;
+    padding: 15px;
+    }
+    
+    .arrowButton {
+    width: 35px;
+    height: 35px;
+    }
+    
+    .iconArrow {
+    width: 18px;
+    height: 18px;
+    }
+}
