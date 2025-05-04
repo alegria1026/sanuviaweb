@@ -1,0 +1,139 @@
+.wrapper {
+    padding: 2rem;
+    background-color: #fff;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.title {
+    margin-bottom: 2rem;
+    padding-bottom: 10px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #208C3C;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #208C3C;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.cardText {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+@media (max-width: 1024px) {
+    .title {
+    font-size: 2rem;
+    }
+    
+    .content {
+    gap: 2rem;
+    }
+    
+    .card {
+    padding: 1.5rem;
+    }
+    
+    .cardTitle {
+    font-size: 1.3rem;
+    }
+    
+    .cardText {
+    font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .card {
+    width: 100%;
+    max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+    padding: 2rem 1rem;
+    }
+    
+    .title {
+    font-size: 2.3rem;
+    }
+    
+    .card {
+    padding: 1.25rem;
+    }
+    
+    .cardText {
+    font-size: 0.9rem;
+    }
+}
+
+/* ... (conserva todos los estilos previos) ... */
+
+.cardTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #208C3C;
+    text-align: center;
+    margin-bottom: 0.8rem; /* Espacio entre título e icono */
+}
+
+.cardIcon {
+    font-size: 4rem;
+    color: #208C3C;
+    margin: 0 auto 1.5rem; /* Centrado y espacio inferior */
+    display: block;
+}
+
+.cardText {
+    margin-top: 0; /* Eliminamos margen superior del texto */
+}
+
+/* Ajustes responsive para el nuevo orden */
+@media (max-width: 1024px) {
+    .cardIcon {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardIcon {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    }
+}
