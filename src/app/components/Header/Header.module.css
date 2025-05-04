@@ -1,0 +1,123 @@
+.heroSection {
+    position: relative;
+    height: 95vh;
+    background-image: url('./kit-image.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.menuWrapper {
+    z-index: 10;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.heroTextContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding: 2rem;
+    max-width: 800px;
+    margin-left: 5%;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.heroText {
+    font-size: 1.7rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #fff;
+    max-width: 80%;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    .heroText {
+        font-size: 1.5rem;
+    }
+    .heroTextContainer {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    .heroText {
+        font-size: 1.3rem;
+    }
+    .heroTextContainer {
+        padding: 1rem;
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+        .heroText {
+        max-width: 90%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+    .heroText {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+    }
+    .heroTextContainer {
+        padding: 1rem;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .heroSection {
+        height: auto;
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+        background-position: right center;
+    }
+}
