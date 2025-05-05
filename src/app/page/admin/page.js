@@ -5,10 +5,6 @@ export default function admin() {
     return(
         <div>
             <Menu />
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
             <Login />
         </div>
     );

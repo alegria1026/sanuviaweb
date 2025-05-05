@@ -9,19 +9,19 @@ function Footer() {
 
         <div className={styles.column}>
           <div className={styles.logo}>
-            <span className={styles.logoText}>Fresh Fusion</span>
+            <span className={styles.logoText}>Sanuvia</span>
           </div>
           
           <address className={styles.address}>
-            <p>Av. de los Alimentos #55</p>
-            <p>Col. Frutal, Ciudad de México,</p>
-            <p>C.P. 12000</p>
-            <p>Ciudad de México, CDMX</p>
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Lorem ipsum</p>
+            <p>Lorem ipsum dolor sit</p>
           </address>
           
           <div className={styles.contact}>
             <p>Tel. <a href="tel:5555555555" className={styles.link}>55 5555 5555</a></p>
-            <p><a href="mailto:contacto@freshfusion.mx" className={styles.link}>contacto@freshfusion.mx</a></p>
+            <p><a href="mailto:contacto@freshfusion.mx" className={styles.link}>contacto@sanuvia.mx</a></p>
           </div>
         </div>
         
@@ -31,9 +31,9 @@ function Footer() {
           <nav className={styles.menu}>
             <ul>
               <li><Link href="/" className={styles.menuItem}>Inicio</Link></li>
-              <li><Link href="/us" className={styles.menuItem}>Nosotros</Link></li>
-              <li><Link href="/kits" className={styles.menuItem}>Kits</Link></li>
-              <li><Link href="/magazine" className={styles.menuItem}>Revista</Link></li>
+              <li><Link href="/page/us" className={styles.menuItem}>Nosotros</Link></li>
+              <li><Link href="/page/product" className={styles.menuItem}>Funcionalidades</Link></li>
+              <li><Link href="/page/play" className={styles.menuItem}>Juego</Link></li>
             </ul>
           </nav>
         </div>

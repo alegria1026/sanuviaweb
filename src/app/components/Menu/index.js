@@ -24,7 +24,7 @@ function Menu() {
       <div className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
         <Link href="/" className={styles.navLink}>Inicio</Link>
         <Link href="/page/us" className={styles.navLink}>Nosotros</Link>
-        <Link href="/page/product" className={styles.navLink}>Productos</Link>
+        <Link href="/page/product" className={styles.navLink}>Funcionalidades</Link>
         <Link href="/play" className={styles.navLink}>Juego</Link>
       </div>
     </nav>

@@ -1,12 +1,11 @@
 /* Estilos generales */
 .wrapper {
-    padding: 2rem;
+    padding: 5rem;
     background-color: #fff;
-    color: #000;
-    margin-top: 4rem;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 6rem auto;
     border-radius: 8px;
+    border: 1px solid #f0f0f0;
 }
 
 .title {
@@ -14,7 +13,7 @@
     font-size: 2.5rem;
     font-weight: bold;
     color: #208C3C;
-    margin-bottom: 1.5rem;
+    padding-bottom: 3rem;
     text-transform: uppercase;
 }
 
@@ -41,7 +40,8 @@
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    color: #333;
+    color: #3333;
+    background-color: #fff;
 }
 
 .error {

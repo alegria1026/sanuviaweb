@@ -1,5 +1,8 @@
+// src/app/components/Login.js
 'use client';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';  // Para redirigir
+import { auth, signInWithEmailAndPassword } from "@/app/lib/firabese";
 import styles from './Login.module.css';
 
 function Login() {
@@ -7,20 +10,31 @@ function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const router = useRouter();  // Para redirigir al dashboard
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
 
-    // Simulación de la lógica de validación
-    if (email === 'admin@example.com' && password === 'password123') {
-      // Si las credenciales son correctas, redirige al dashboard
-      window.location.href = '/dashboard';
-    } else {
-      setError('Credenciales incorrectas.');
+    try {
+      // Intentar iniciar sesión con Firebase
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      
+      // Verificar si el correo es "example@gmail.com"
+      if (email === 'yahirhumberto04@gmail.com') {
+        // Si es exitoso, redirige al dashboard
+        router.push('/page/disease');
+      } else {
+        // Si el correo no es el permitido, muestra un error
+        setError('Este correo no tiene acceso.');
+      }
+    } catch (err) {
+      // Si hay un error, muestra el mensaje
+      setError('Credenciales incorrectas o error de conexión.');
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (

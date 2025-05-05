@@ -12,13 +12,13 @@ function Header() {
             </div>
             <div className={styles.heroContent}>
                 <div className={styles.heroTextContainer}>
-                    <h1 className={styles.title}>Transforma tu alimentación diaria</h1>
+                    <h1 className={styles.title}>BIENVENIDO A SANUVIA</h1>
                     <br></br>
                     <p className={styles.heroText}>
-                        En FreshFusion, ofrecemos kits de almuerzo saludables, nutritivos y equilibrados que se adaptan a las necesidades nutricionales específicas de personas con diabetes, obesidad y desnutrición.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <br></br>
-                    <Button text="Descubre nuestros kits" link="/kits" />
+                    <Button text="DESCARGAR APP" link="/kits" />
                 </div>
             </div>
         </div>
