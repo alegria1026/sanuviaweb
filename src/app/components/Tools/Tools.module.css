@@ -1,0 +1,88 @@
+.tools {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.toolButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8f5e9;
+  border: 2px solid #a5d6a7;
+  border-radius: 8px;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 100px;
+  flex: 1;
+}
+
+.toolButton:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #c8e6c9;
+}
+
+.toolButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toolIcon {
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.toolButton:hover:not(:disabled) .toolIcon {
+  transform: scale(1.1);
+}
+
+.activeTool {
+  background-color: #c8e6c9;
+  border-color: #4caf50;
+  font-weight: bold;
+}
+
+.resetButton {
+  background-color: #e57373;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.resetButton:hover {
+  background-color: #ef5350;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .tools {
+    flex-direction: column;
+    padding: 0.8rem;
+  }
+  
+  .toolButton {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}

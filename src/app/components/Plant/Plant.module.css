@@ -1,0 +1,181 @@
+.plant {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  transition: all 1s ease-in-out;
+  transform-origin: bottom center;
+  animation: growPlant 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes growPlant {
+  from {
+    transform: scaleY(0.5) translateX(-50%);
+    opacity: 0.5;
+  }
+  to {
+    transform: scaleY(1) translateX(-50%);
+    opacity: 1;
+  }
+}
+
+.stem {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(to right, #388e3c, #8bc34a);
+  z-index: 5;
+  border-radius: 5px;
+}
+
+.leaf {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background: linear-gradient(to bottom right, #7cb342, #689f38);
+  border-radius: 50% 50% 50% 0;
+  z-index: 6;
+  animation: leafWiggle 3s infinite ease-in-out;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.leafleft {
+  left: -35px;
+  transform: rotate(-20deg);
+  animation: leafWiggle 3s infinite ease-in-out;
+}
+
+.leafright {
+  right: -35px;
+  transform: rotate(20deg) scaleX(-1);
+  animation: leafWiggleRight 3s infinite ease-in-out;
+}
+
+@keyframes leafWiggle {
+  0%, 100% { transform: rotate(-20deg); }
+  50% { transform: rotate(-25deg); }
+}
+
+@keyframes leafWiggleRight {
+  0%, 100% { transform: rotate(20deg) scaleX(-1); }
+  50% { transform: rotate(25deg) scaleX(-1); }
+}
+
+.seed {
+  position: relative;
+  background: radial-gradient(ellipse at center, #795548, #4e342e);
+  border-radius: 50%;
+  z-index: 6;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.seedDetail {
+  position: absolute;
+  width: 30%;
+  height: 50%;
+  top: 20%;
+  left: 35%;
+  background-color: #8d6e63;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+/* Estilos para la flor */
+.flower {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  z-index: 7;
+  animation: flowerFloat 3s infinite ease-in-out;
+}
+
+/* Pétalos base */
+.petal {
+  position: absolute;
+  width: 25px;
+  height: 35px;
+  background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  top: 5px;
+  left: 12px;
+  transform-origin: center 30px;
+  animation: petalPulse 2s infinite ease-in-out;
+}
+
+/* Pétalos individuales con rotaciones */
+.petal:nth-child(1) { transform: rotate(0deg); animation-delay: 0s; }
+.petal:nth-child(2) { transform: rotate(45deg); animation-delay: 0.2s; }
+.petal:nth-child(3) { transform: rotate(90deg); animation-delay: 0.4s; }
+.petal:nth-child(4) { transform: rotate(135deg); animation-delay: 0.6s; }
+
+/* Centro de la flor */
+.flower:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #ffde7d, #f8b500);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(248, 181, 0, 0.6);
+  z-index: 8;
+}
+
+/* Detalles del centro */
+.flower:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #6a4c93, #3f3351);
+  border-radius: 50%;
+  z-index: 9;
+  animation: centerPulse 2s infinite alternate;
+}
+
+/* Animación de flotación para toda la flor */
+@keyframes flowerFloat {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* Animación de pulso para los pétalos */
+@keyframes petalPulse {
+  0%, 100% { transform: rotate(var(--rotation)) scale(1); }
+  50% { transform: rotate(var(--rotation)) scale(1.1); }
+}
+
+/* Animación del centro */
+@keyframes centerPulse {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  100% { transform: translate(-50%, -50%) scale(1.2); }
+}
+
+/* Efecto de brillo en los pétalos */
+.petal:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  filter: blur(1px);
+}
