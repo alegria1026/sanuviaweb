@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #FFFFFF;
 }
 
 .heroOverlay {
@@ -15,7 +16,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border-color: #333;
     border-bottom: 1px solid #333;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 0;
@@ -50,21 +50,22 @@
 .title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #333;
+    color: #FFFFFF; /* Blanco */
     margin-bottom: 1.5rem;
     text-align: left;
-    text-transform: uppercase;
     position: relative;
+    text-transform: none;
 }
 
 .heroText {
     font-size: 1.7rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    color: #333;
+    color: #FFFFFF; /* Blanco */
     max-width: 80%;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 1024px) {
     .title {
         font-size: 2.5rem;
@@ -80,9 +81,14 @@
 @media (max-width: 768px) {
     .title {
         font-size: 2rem;
+        text-align: center;
+        color: #FFFFFF;
     }
     .heroText {
         font-size: 1.3rem;
+        text-align: center;
+        max-width: 90%;
+        color: #FFFFFF;
     }
     .heroTextContainer {
         padding: 1rem;
@@ -90,10 +96,6 @@
         align-items: center;
         text-align: center;
         max-width: 100%;
-    }
-        .heroText {
-        max-width: 90%;
-        text-align: center;
     }
 }
 
@@ -103,11 +105,13 @@
         margin-bottom: 1rem;
         text-align: center;
         width: 100%;
+        color: #FFFFFF;
     }
     .heroText {
         font-size: 1.1rem;
         margin-bottom: 1.5rem;
         max-width: 100%;
+        color: #FFFFFF;
     }
     .heroTextContainer {
         padding: 1rem;

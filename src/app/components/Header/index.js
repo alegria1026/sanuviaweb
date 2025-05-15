@@ -12,13 +12,15 @@ function Header() {
             </div>
             <div className={styles.heroContent}>
                 <div className={styles.heroTextContainer}>
-                    <h1 className={styles.title}>BIENVENIDO A SANUVIA</h1>
-                    <br></br>
+                    <h1 className={styles.title}>
+                        Aprende, transforma y nutre tu vida con Sanuvia
+                    </h1>
+                    <br />
                     <p className={styles.heroText}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        La app que enseña a tus hijos a cultivar su salud.
                     </p>
-                    <br></br>
-                    <Button text="DESCARGAR APP" link="/kits" />
+                    <br />
+                    <Button text="ÚNETE A LA BETA GRATUITA" link="/registro-beta" />
                 </div>
             </div>
         </div>
