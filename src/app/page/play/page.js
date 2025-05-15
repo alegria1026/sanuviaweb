@@ -1,127 +1,45 @@
-"use client";
+'use client'
+import dynamic from 'next/dynamic'
 
-import { useState } from "react";
-import Head from "next/head";
-import Garden from "@/app/components/Garden";
-import Tools from "@/app/components/Tools";
-import styles from "./play.module.css";
+// This avoids server-side rendering for the Phaser component
+const Game = dynamic(() => import('@/app/components/Game'), {
+  ssr: false,
+})
 
-export default function Play() {
-  const [plantStage, setPlantStage] = useState(0);
-  const [isWatered, setIsWatered] = useState(false);
-  const [message, setMessage] = useState("¡Bienvenido a tu jardín! Comienza a cultivar.");
-  const [showTutorial, setShowTutorial] = useState(false);
-
-  const handlePlant = () => {
-    if (plantStage === 0) {
-      setPlantStage(1);
-      setMessage("¡Has plantado una semilla! Ahora necesita agua.");
-    } else {
-      setMessage("Ya has plantado una semilla.");
-    }
-  };
-
-  const handleWater = () => {
-    if (plantStage === 0) {
-      setMessage("¡Primero debes plantar una semilla!");
-      return;
-    }
-    
-    setIsWatered(true);
-    setMessage("¡Has regado tu planta!");
-    
-    if (plantStage === 1) {
-      setTimeout(() => {
-        setPlantStage(2);
-        setIsWatered(false);
-        setMessage("¡Tu planta está creciendo! Necesita más agua.");
-      }, 2000);
-    } else if (plantStage === 2) {
-      setTimeout(() => {
-        setPlantStage(3);
-        setIsWatered(false);
-        setMessage("¡Tu planta está floreciendo! Un poco más de agua.");
-      }, 2000);
-    } else if (plantStage === 3) {
-      setTimeout(() => {
-        setPlantStage(4);
-        setMessage("¡Felicidades! Has cultivado una planta exitosamente.");
-      }, 2000);
-    }
-  };
-
-  const handleRake = () => {
-    if (plantStage === 0) {
-      setMessage("¡Estás preparando la tierra para plantar!");
-    } else {
-      setMessage("La tierra ya está preparada y has plantado una semilla.");
-    }
-  };
-
-  const resetGarden = () => {
-    setPlantStage(0);
-    setIsWatered(false);
-    setMessage("¡Jardín reiniciado! Comienza de nuevo.");
-  };
-
-  const toggleTutorial = () => {
-    setShowTutorial(!showTutorial);
-  };
-
+export default function PlayPage() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Juego de Cultivo</title>
-        <meta name="description" content="Aprende a cultivar jugando" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      
-      <main className={styles.main}>
-        <div className={styles.header}>
-          <h1 className={styles.title}>Mi Jardín de Cultivo</h1>
-          <button
-            className={styles.helpButton}
-            onClick={toggleTutorial}
-            aria-label="Mostrar tutorial"
-          >
-            ?
-          </button>
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100 p-6">
+      <div className="max-w-5xl mx-auto">
+        <div className="bg-white rounded-xl overflow-hidden shadow-2xl border-2 border-green-600">
+          <Game />
         </div>
         
-        <div className={`${styles.message} ${styles[`stage${plantStage}`]}`}>
-          {message}
-        </div>
-        
-        <Garden plantStage={plantStage} isWatered={isWatered} />
-        
-        <Tools
-          onPlant={handlePlant}
-          onWater={handleWater}
-          onRake={handleRake}
-          onReset={resetGarden}
-          plantStage={plantStage}
-        />
-        
-        {showTutorial && (
-          <div className={styles.tutorialOverlay}>
-            <div className={styles.tutorialContent}>
-              <h2>¿Cómo jugar?</h2>
-              <ol>
-                <li>Usa el rastrillo para preparar la tierra</li>
-                <li>Planta una semilla</li>
-                <li>Riega la planta periódicamente</li>
-                <li>¡Observa cómo crece tu planta!</li>
+        <div className="mt-8 p-6 bg-white rounded-lg shadow-lg">
+          <h2 className="text-2xl font-bold text-green-700 mb-4">Instrucciones de Juego</h2>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-green-50 p-4 rounded-lg">
+              <h3 className="font-bold text-lg text-green-800 mb-2">Cómo jugar:</h3>
+              <ol className="list-decimal pl-5 space-y-2">
+                <li>Selecciona el paquete de semillas y haz clic en la tierra para plantar.</li>
+                <li>Usa la regadera para mantener tus plantas hidratadas.</li>
+                <li>Riega regularmente hasta que la planta dé frutos.</li>
+                <li>¡Cosecha tus plantas cuando estén listas!</li>
               </ol>
-              <button
-                className={styles.closeTutorial}
-                onClick={toggleTutorial}
-              >
-                Entendido
-              </button>
+            </div>
+            
+            <div className="bg-green-50 p-4 rounded-lg">
+              <h3 className="font-bold text-lg text-green-800 mb-2">Consejos:</h3>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Presta atención al indicador de agua para no dejar que las plantas se sequen.</li>
+                <li>Cada día recibirás nuevas semillas (hasta un máximo de 10).</li>
+                <li>Cada planta cosechada te dará 2 frutas.</li>
+                <li>Si una planta se marchita, perderás la oportunidad de cosechar sus frutos.</li>
+              </ul>
             </div>
           </div>
-        )}
-      </main>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
