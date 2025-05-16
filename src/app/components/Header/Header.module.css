@@ -50,7 +50,7 @@
 .title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #FFFFFF; /* Blanco */
+    color: #F5F5F5; /* Blanco */
     margin-bottom: 1.5rem;
     text-align: left;
     position: relative;
@@ -61,7 +61,7 @@
     font-size: 1.7rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    color: #FFFFFF; /* Blanco */
+    color: #F5F5F5; /* Blanco */
     max-width: 80%;
 }
 
@@ -105,13 +105,13 @@
         margin-bottom: 1rem;
         text-align: center;
         width: 100%;
-        color: #FFFFFF;
+        color: #F5F5F5;
     }
     .heroText {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         margin-bottom: 1.5rem;
         max-width: 100%;
-        color: #FFFFFF;
+        color: #F5F5F5;
     }
     .heroTextContainer {
         padding: 1rem;
@@ -120,8 +120,8 @@
     }
     .heroSection {
         height: auto;
-        padding-top: 6rem;
-        padding-bottom: 2rem;
-        background-position: right center;
+        padding-top: 8rem;
+        padding-bottom: 3.5rem;
+        background-position: left center;
     }
 }

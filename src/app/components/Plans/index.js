@@ -8,21 +8,22 @@ export default function Plans() {
       price: 'Gratis',
       features: [
         'Acceso al foro de recetas',
-        'Uso limitado de NutriScan (5 escaneos/mes)',
         'Consulta de enfermedades infantiles',
+        'Uso limitado de NutriScan (5 escaneos/mes)',
         'Ver publicaciones en Ofertas Frescas'
       ],
       highlight: false
     },
     {
-      name: 'Plan Avanzado',
-      price: '$49 / mes',
+      name: 'Plan Premium',
+      price: '$120 / bimestral',
       features: [
-        'Acceso completo a todos los foros',
         'NutriScan ilimitado',
         'Recomendaciones personalizadas',
+        'Acceso completo a foros y comunidades',
         'Publicación en Ofertas Frescas',
-        'Acceso al sistema de cultivo por ubicación'
+        'Cultivos digitales según tu ubicación',
+        'Acceso offline y recordatorios de salud'
       ],
       highlight: true
     }
@@ -43,7 +44,7 @@ export default function Plans() {
             <ul className={styles.features}>
               {plan.features.map((feature, i) => (
                 <li key={i} className={styles.featureItem}>
-                  ✓ {feature}
+                   {feature}
                 </li>
               ))}
             </ul>

@@ -1,115 +1,152 @@
 .wrapper {
-    padding: 5rem 2rem;
-    background: #ffffff;
-    max-width: 1300px;
-    margin: 0 auto;
-  }
-  
-  .title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #208c3c;
-    text-align: center;
-    margin-bottom: 4rem;
-    text-transform: uppercase;
-  }
-  
+  padding: 3rem 5rem 4rem 5rem;
+  background-color: #FFFFFF;
+  color: #000000;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #FFF9E6; /* Amarillo neutro que contrasta con blanco */
+
+}
+
+.title {
+  margin-bottom: 1rem;
+  padding-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #F4D35E; /* Amarillo pastel fuerte */
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2); /* sombra verde pastel */
+  border: 2px solid #F1F1F1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+ß
+
+.highlight {
+  border-color: #FDD0A2; /* Naranja pastel */
+  box-shadow: 0 0 0 4px rgba(253, 208, 162, 0.4);
+}
+
+.label {
+  position: absolute;
+  top: -1rem;
+  background: #FDD0A2;
+  color: #000000;
+  font-weight: bold;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.planName {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #444444;
+  margin-bottom: 1.5rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.featureItem {
+  font-size: 1.05rem;
+  color: #333333;
+  margin-bottom: 0.75rem;
+  text-align: left;
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.featureItem::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #A9DA90; /* Verde pastel acento */
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
   .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-    justify-content: center;
+    gap: 2rem;
   }
-  
-  .card {
-    background-color: #f9f9f9;
-    border-radius: 14px;
-    padding: 2.5rem 2rem;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-    border: 2px solid #e0e0e0;
-    display: flex;
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .planName {
+    font-size: 1.4rem;
+  }
+
+  .price {
+    font-size: 1.15rem;
+  }
+
+  .featureItem {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    position: relative;
+    text-align: justify;
+    gap: 2rem;
   }
-  
-  .card:hover {
-    transform: translateY(-6px);
+
+  .title {
+    font-size: 2rem;
   }
-  
-  .highlight {
-    border-color: #208c3c;
-    background: #f4fdf7;
-  }
-  
-  .label {
-    position: absolute;
-    top: -1rem;
-    background: #208c3c;
-    color: white;
-    font-weight: bold;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-  }
-  
-  .planName {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #208c3c;
-    margin-bottom: 0.5rem;
-  }
-  
-  .price {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #444;
-    margin-bottom: 1.5rem;
-  }
-  
-  .features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  
+
   .featureItem {
-    font-size: 1.05rem;
-    color: #333;
-    margin-bottom: 0.75rem;
-    text-align: left;
-    padding-left: 1rem;
-    position: relative;
+    font-size: 0.95rem;
   }
-  
-  .featureItem::before {
-    content: '';
-    position: absolute;
-    left: 0.25rem;
-    top: 0.5rem;
-    height: 6px;
-    width: 6px;
-    background: #208c3c;
-    border-radius: 50%;
+
+  .wrapper {
+    padding: 2rem 1rem;
   }
-  
-  @media (max-width: 768px) {
-    .title {
-      font-size: 2rem;
-    }
-  
-    .planName {
-      font-size: 1.3rem;
-    }
-  
-    .price {
-      font-size: 1.1rem;
-    }
-  
-    .featureItem {
-      font-size: 1rem;
-    }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.3rem;
   }
-  
+
+  .featureItem {
+    font-size: 0.9rem;
+  }
+}

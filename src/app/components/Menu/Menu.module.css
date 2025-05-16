@@ -8,12 +8,12 @@
     left: 0;
     right: 0;
     z-index: 10;
-    background-color: #fff;
+    background-color: #FFFFFF; /* Fondo blanco */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar * {
-    transition: color 0.2s;
+    transition: color 0.2s, background-color 0.2s;
 }
 
 .logo {
@@ -28,25 +28,26 @@
 }
 
 .navLink {
-    color: #333333; /* Color principal de los enlaces */
+    color: #000000; /* Texto negro */
     font-weight: 600;
     font-size: 1.1rem;
-    transition: color 0.2s; /* Transición para un cambio suave */
+    transition: color 0.2s;
 }
 
 .navLink:hover {
-    color: #208C3C; /* Color verde primario al hacer hover */
+    color: #FDD0A2; /* Hover naranja pastel */
 }
 
 .menuButton {
     display: none;
     background: none;
     border: none;
-    color: #208C3C;
+    color: #F4D35E; /* Ícono en amarillo pastel */
     font-size: 2rem;
     cursor: pointer;
 }
 
+/* Responsive - Mobile */
 @media (max-width: 768px) {
     .navLinks {
         position: absolute;
@@ -58,16 +59,16 @@
         padding: 1rem;
         display: none;
         text-align: right;
+        background-color: white; /* Fondo menú móvil como el original */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .navLinks.open {
         display: flex;
-        background-color: white;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .navLinks.open .navLink {
-        color: black;
+        color: #000000;
     }
 
     .menuButton {
@@ -81,5 +82,5 @@
 }
 
 .menuOpen .menuButton {
-    color: #6CC142;
+    color: #F4D35E; /* Ícono amarillo pastel al estar abierto */
 }

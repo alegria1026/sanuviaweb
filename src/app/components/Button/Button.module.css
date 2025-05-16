@@ -1,18 +1,19 @@
 .button {
     display: inline-block;
-    background-color: #208C3C;
-    color: white;
+    background-color: #FDD0A2;
+    color: #000000;
     font-size: 1.4rem;
     font-weight: 700;
-    padding: 1.2rem 2.5rem;
-    border-radius: 8px;
+    padding: 1.2rem 6rem;
     text-decoration: none;
     text-align: center;
     transition: background-color 0.3s, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .button:hover {
-    background-color: #6CC142;
+    background-color: #FCB87E;
 }
 
 @media (max-width: 768px) {
@@ -29,7 +30,7 @@
         font-size: 1.2rem;
         padding: 0.8rem 2rem;
         border-radius: 8px;
-        margin-top: 1.5rem;
+        margin-top: 0;
         width: 80%;
         display: block;
         margin-left: auto;

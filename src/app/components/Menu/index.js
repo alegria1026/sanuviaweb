@@ -25,7 +25,7 @@ function Menu() {
         <Link href="/" className={styles.navLink}>Inicio</Link>
         <Link href="/page/us" className={styles.navLink}>Nosotros</Link>
         <Link href="/page/product" className={styles.navLink}>Funcionalidades</Link>
-        <Link href="/page/play" className={styles.navLink}>Juego</Link>
+        <Link href="/page/play" className={styles.navLink}>Cultiva y Aprende</Link>
       </div>
     </nav>
   )

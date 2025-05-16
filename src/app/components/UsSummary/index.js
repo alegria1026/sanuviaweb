@@ -9,16 +9,16 @@ export default function UsSummary() {
       <div className={styles.content}>
         <div className={styles.text}>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Sanuvia es una organización comprometida con el bienestar infantil, enfocada en fomentar hábitos alimenticios saludables en niñas y niños.
           </p>
           <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            A través de una app interactiva, asesorada por profesionales en nutrición, buscamos transformar la educación alimentaria desde casa mediante el juego, el cultivo y la tecnología.
           </p>
           <ul className={styles.list}>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Consectetur adipiscing elit.</li>
-            <li>Sed do eiusmod tempor incididunt.</li>
-            <li>Labore et dolore magna aliqua.</li>
+            <li>Educación nutricional basada en evidencia.</li>
+            <li>Recetas saludables para toda la familia.</li>
+            <li>Guías personalizadas para cultivar en casa.</li>
+            <li>Juego interactivo para aprender sembrando.</li>
           </ul>
           <a href="/page/us" className={styles.btnConocer}>
             Conocer más acerca de la empresa

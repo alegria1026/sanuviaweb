@@ -1,7 +1,7 @@
 .wrapper {
   padding: 2rem;
-  background-color: #fff;
-  color: #000;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 .content {
@@ -25,7 +25,7 @@
   padding-bottom: 10px;
   font-size: 3rem;
   font-weight: 700;
-  color: #208C3C; 
+  color: #F4D35E; /* Amarillo más oscuro de la paleta */
   text-align: center;
   text-transform: uppercase;
   position: relative;
@@ -35,7 +35,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  color: #333;
+  color: #333333;
   text-align: justify;
 }
 
@@ -47,7 +47,7 @@
 .list li {
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  color: #333;
+  color: #333333;
 }
 
 .image {
@@ -68,21 +68,20 @@
   display: inline-block;
   margin-top: 1rem;
   padding: 1rem 2.5rem;
-  background-color: #208C3C; 
-  color: white;
+  background-color: #FDD0A2; /* Naranja pastel */
+  color: #000000;
   border-radius: 25px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(46, 139, 87, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 
 .btnConocer:hover {
-  background-color: #6CC142; 
+  background-color: #FCB87E; /* Naranja hover más cálido */
 }
-
 
 @media (max-width: 1024px) {
   .content {
@@ -92,7 +91,6 @@
   .title {
     font-size: 2rem;
   }
-
 
   .text p,
   .list li {
@@ -132,7 +130,6 @@
   .title {
     font-size: 2.3rem;
   }
-
 
   .text p,
   .list li {

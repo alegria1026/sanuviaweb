@@ -17,10 +17,10 @@ function Header() {
                     </h1>
                     <br />
                     <p className={styles.heroText}>
-                        La app que enseña a tus hijos a cultivar su salud.
+                        La app que enseña a tus hijos a cultivar su salud
                     </p>
                     <br />
-                    <Button text="ÚNETE A LA BETA GRATUITA" link="/registro-beta" />
+                    <Button text="DESCARGA APP" link="https://docs.google.com/forms/d/e/1FAIpQLScFlopf33bHf6znwVDprQniUPaTsPW78DYDf95uifmkxck4DQ/viewform?usp=dialog" />
                 </div>
             </div>
         </div>

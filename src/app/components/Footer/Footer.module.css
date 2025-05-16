@@ -1,6 +1,6 @@
 .footer {
-    background-color: #208C3C; /* Fondo verde suave acorde a Fresh Fusion */
-    color: #fff;
+    background-color: #B48A2E; /* Fondo con color principal */
+    color: #000000;
     padding: 4rem 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -58,27 +58,21 @@
 }
 
 .link {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .link:hover {
-    color: #7AFF64;
+    color: #333333;
 }
 
-.columnTitle {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    color: #fff;
-}
-
+.columnTitle,
 .columnMenu {
     font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
-    color: #fff;
+    color: #000000;
 }
 
 .menu ul {
@@ -92,18 +86,18 @@
 }
 
 .menuItem {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
     display: inline-block;
 }
 
 .menuItem:first-child {
-    color: #ffff;
+    color: #000000;
 }
 
 .menuItem:hover {
-    color: #7AFF64;
+    color: #333333;
 }
 
 .socialIcons {
@@ -128,26 +122,26 @@
 /* Responsive styles */
 @media (max-width: 768px) {
     .container {
-    flex-direction: column;
+        flex-direction: column;
     }
-    
+
     .column {
-    margin-bottom: 2rem;
+        margin-bottom: 2rem;
     }
-    
+
     .column:last-child {
-    margin-bottom: 0;
+        margin-bottom: 0;
     }
 
     .menu {
-    display: none;
+        display: none;
     }
 
     .columnMenu {
-    display: none;
+        display: none;
     }
 
     .columnM {
-    display: none;
+        display: none;
     }
 }

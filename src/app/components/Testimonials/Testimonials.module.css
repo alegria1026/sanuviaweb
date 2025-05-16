@@ -1,45 +1,47 @@
 .wrapper {
-  padding: 5rem 2rem;
-  background: #f0faf3;
-  margin: 0 auto;
+  padding: 3rem 5rem 4rem 5rem;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 .title {
-  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 10px;
+  font-size: 3rem;
   font-weight: 700;
-  color: #208c3c;
+  color: #F4D35E; /* Color principal */
   text-align: center;
-  margin-bottom: 4rem;
   text-transform: uppercase;
+  position: relative;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
+  gap: 3rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .card {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 16px;
   padding: 2.5rem 2rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 20px rgba(244, 211, 94, 0.2); /* Sombra color principal */
+  border: 2px solid #F4D35E; /* Borde color principal */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  position: relative;
   transition: transform 0.3s ease;
+  position: relative;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-}
 
 .quoteIcon {
   font-size: 2.5rem;
-  color: #208c3c;
+  color: #F4D35E; /* Color principal */
   margin-bottom: 1rem;
 }
 
@@ -47,18 +49,36 @@
   font-style: italic;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #333;
+  color: #333333;
   margin-bottom: 1.5rem;
   padding: 0 1rem;
 }
 
 .name {
   font-weight: 600;
-  color: #208c3c;
+  color: #F4D35E; /* Color principal */
   font-size: 1rem;
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .grid {
+    gap: 2rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .quoteIcon {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
@@ -68,11 +88,21 @@
     font-size: 2rem;
   }
 
-  .text {
-    font-size: 1rem;
-  }
-
   .quoteIcon {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 0.95rem;
+  }
+
+  .name {
+    font-size: 0.95rem;
   }
 }
