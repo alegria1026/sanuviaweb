@@ -6,7 +6,7 @@ export default function Testimonials() {
   const comments = [
     {
       name: 'María González',
-      text: 'Gracias a Raíz y Vida he aprendido a cultivar en casa y comer más saludable. ¡Incluso mis hijos se interesan en el huerto!'
+      text: 'Gracias a Sanuvia he aprendido a cultivar en casa y comer más saludable. ¡Incluso mis hijos se interesan en el huerto!'
     },
     {
       name: 'Luis Torres',

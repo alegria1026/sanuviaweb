@@ -9,30 +9,27 @@ export default function UsIntroduction() {
       <div className={styles.content}>
         <div className={styles.text}>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            En SANUVIA somos una plataforma educativa digital enfocada en fomentar hábitos de alimentación saludable desde la infancia, con énfasis en comunidades vulnerables del sur de Veracruz. Mediante tecnología intuitiva e interacción accesible, promovemos decisiones informadas sobre salud nutricional infantil.
           </p>
           <ul className={styles.list}>
             <li>
               <span className={styles.checkmark}>✓</span>
-              Lorem ipsum dolor sit amet.
+              Promovemos educación alimentaria para familias y niños.
             </li>
             <li>
               <span className={styles.checkmark}>✓</span>
-              Consectetur adipiscing elit.
+              Desarrollamos herramientas interactivas con enfoque social.
             </li>
             <li>
               <span className={styles.checkmark}>✓</span>
-              Sed do eiusmod tempor.
+              Usamos tecnología para impactar comunidades reales.
             </li>
           </ul>
         </div>
         <div className={styles.image}>
           <Image
             src="/empresa.png"
-            alt="Equipo FreshFusion"
+            alt="Imagen institucional Sanuvia"
             fill
             className={styles.img}
             priority

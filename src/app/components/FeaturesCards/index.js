@@ -3,7 +3,7 @@ import styles from './FeaturesCards.module.css';
 import {
   FaUtensils,
   FaSeedling,
-  FaMicroscope,
+  FaQrcode,
   FaHeartbeat,
   FaStore
 } from 'react-icons/fa';
@@ -13,27 +13,32 @@ export default function Features() {
     {
       title: 'Recetas',
       icon: <FaUtensils className={styles.featureIcon} />,
-      description: 'Comparte recetas saludables, filtra por tipo de dieta y encuentra inspiración culinaria nutritiva.'
+      description: 'Comparte recetas saludables, filtra por tipo de dieta y encuentra inspiración culinaria nutritiva.',
+      videoId: '4SNItNkBNLo'
     },
     {
       title: 'Cultivo',
       icon: <FaSeedling className={styles.featureIcon} />,
-      description: 'Descubre qué cultivos puedes plantar según tu ubicación y clima, y aprende con guías prácticas.'
+      description: 'Descubre qué cultivos puedes plantar según tu ubicación y clima, y aprende con guías prácticas.',
+      videoId: 'eauhVvw5YHs'
     },
     {
       title: 'NutriScan',
-      icon: <FaMicroscope className={styles.featureIcon} />,
-      description: 'Escanea alimentos para obtener su información nutricional y recibe recomendaciones personalizadas.'
+      icon: <FaQrcode className={styles.featureIcon} />,
+      description: 'Escanea alimentos para obtener su información nutricional y recibe recomendaciones personalizadas.',
+      videoId: 'rChpZejmaU0'
     },
     {
       title: 'Salud Infantil',
       icon: <FaHeartbeat className={styles.featureIcon} />,
-      description: 'Información clara sobre diabetes tipo 1 y 2, obesidad infantil y prevención desde temprana edad.'
+      description: 'Información clara sobre diabetes tipo 1 y 2, obesidad infantil y prevención desde temprana edad.',
+      videoId: 'XUE8cnujLuE'
     },
     {
       title: 'Ofertas Frescas',
       icon: <FaStore className={styles.featureIcon} />,
-      description: 'Conecta con comerciantes locales que ofrecen alimentos sobrantes del día para reducir desperdicios.'
+      description: 'Conecta con comerciantes locales que ofrecen alimentos sobrantes del día para reducir desperdicios.',
+      videoId: 'lczybookscg'
     }
   ];
 
@@ -48,6 +53,9 @@ export default function Features() {
               <h3 className={styles.cardTitle}>{feature.title}</h3>
             </div>
             <p className={styles.cardText}>{feature.description}</p>
+            <a href={`/page/demo/${feature.videoId}`} className={styles.demoButton}>
+              Ver demo
+            </a>
           </div>
         ))}
       </div>

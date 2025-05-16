@@ -11,14 +11,14 @@ export default function MissionVision() {
           <h3 className={styles.cardTitle}>MISIÓN</h3>
           <FaBullseye className={styles.cardIcon} />
           <p className={styles.cardText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Somos una plataforma digital dedicada a informar los beneficios de la alimentación saludable, así como enfermedades relacionadas como la diabetes y la obesidad infantil. Con herramientas interactivas, buscamos acercar el conocimiento a las familias para fomentar decisiones informadas desde la infancia.
           </p>
         </div>
         <div className={styles.card}>
           <h3 className={styles.cardTitle}>VISIÓN</h3>
           <FaChartLine className={styles.cardIcon} />
           <p className={styles.cardText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ser una plataforma líder en información nutrimental en la zona sur de Veracruz, reconocida por ser confiable e innovadora, utilizando tecnología para generar impacto social en los hábitos de salud alimentaria en futuras generaciones.
           </p>
         </div>
       </div>
