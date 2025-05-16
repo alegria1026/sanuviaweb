@@ -28,7 +28,7 @@ export default function UsIntroduction() {
         </div>
         <div className={styles.image}>
           <Image
-            src="/empresa.png"
+            src="/empresa.jpeg"
             alt="Imagen institucional Sanuvia"
             fill
             className={styles.img}
