@@ -27,7 +27,7 @@ export default function UsSummary() {
         <div className={styles.image}>
           <Image src="/empresa.jpeg" alt="Imagen de la empresa" fill className={styles.img} />
         </div>
-      </div>ß
+      </div>
     </section>
   );
 }

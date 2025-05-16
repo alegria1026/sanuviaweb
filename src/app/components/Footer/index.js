@@ -33,7 +33,7 @@ function Footer() {
               <li><Link href="/" className={styles.menuItem}>Inicio</Link></li>
               <li><Link href="/page/us" className={styles.menuItem}>Nosotros</Link></li>
               <li><Link href="/page/product" className={styles.menuItem}>Funcionalidades</Link></li>
-              <li><Link href="/page/play" className={styles.menuItem}>Juego</Link></li>
+              <li><Link href="/page/play" className={styles.menuItem}>Cultiva y aprende</Link></li>
             </ul>
           </nav>
         </div>

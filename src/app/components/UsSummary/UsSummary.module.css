@@ -61,7 +61,7 @@
 .img {
   object-fit: cover;
   border-radius: 8px;
-  object-position: top right;
+  object-position: top;
 }
 
 .btnConocer {

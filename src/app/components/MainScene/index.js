@@ -513,7 +513,6 @@ export default class MainScene extends Phaser.Scene {
       this.updateWaterIndicator()
       if (this.waterLevel < 30 && this.needsWater) {
         this.statusText.setText('Estado: ¡Necesitará agua pronto!')
-        // Indicador visual
         this.plantContainer.list[0].setTint(0xffd700)
         this.time.delayedCall(1000, () => {
           if (this.plantContainer.list && this.plantContainer.list[0]) {
