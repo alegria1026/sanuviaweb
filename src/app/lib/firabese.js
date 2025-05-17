@@ -1,6 +1,7 @@
-// src/app/lib/firebase.js
+// Actualizar la configuración de Firebase para incluir Firestore
 import { initializeApp } from 'firebase/app';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore'; // Añadimos esta importación
 
 // Configuración de Firebase
 const firebaseConfig = {
@@ -16,5 +17,6 @@ const firebaseConfig = {
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app); // Instancia de Firestore
 
-export { auth, signInWithEmailAndPassword };
+export { auth, db, signInWithEmailAndPassword };

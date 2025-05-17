@@ -1,0 +1,178 @@
+/* Estilos para la página de gestión de enfermedades */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333333; /* Color de texto general del primer CSS */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.content {
+  margin-top: 2rem;
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.noData {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #666;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.enfermedadGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.enfermedadCard {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  cursor: pointer;
+}
+
+.enfermedadCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(244, 211, 94, 0.2); /* Sombra del color principal */
+}
+
+.cardImg {
+  height: 180px;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enfermedadImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.noImage {
+  color: #999;
+  font-size: 1rem;
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.enfermedadTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #F4D35E; /* Color principal del primer CSS */
+}
+
+.enfermedadDesc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.editButton {
+  background-color: #F4D35E; /* Color principal para el botón de editar */
+  color: #000000; /* Texto negro para el botón de editar */
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.editButton:hover {
+  background-color: #E0C54E; /* Variante ligeramente más oscura del amarillo para hover */
+}
+
+.refreshSection {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.refreshButton {
+  background-color: #f3f3f3;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.refreshButton:hover:enabled {
+  background-color: #e1e1e1;
+}
+
+.refreshButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .enfermedadGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .enfermedadGrid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .cardImg {
+    height: 150px;
+  }
+}
